@@ -60,7 +60,7 @@ public class ApplicationDetailsPostRequestValidatorTests
         var result = (await _validator.ValidateAsync(request));
 
         result.IsValid.Should().BeFalse();
-        result.Errors.First().ErrorMessage.Should().Be("You must enter the number of apprentices");
+        result.Errors.First().ErrorMessage.Should().Be("You must enter the number of learners");
     }
 
     [Test]
@@ -74,7 +74,7 @@ public class ApplicationDetailsPostRequestValidatorTests
         var result = (await _validator.ValidateAsync(request));
 
         result.IsValid.Should().BeFalse();
-        result.Errors.First().ErrorMessage.Should().Be("You must enter the number of apprentices");
+        result.Errors.First().ErrorMessage.Should().Be("You must enter the number of learners");
     }
 
     [Test]
@@ -88,7 +88,7 @@ public class ApplicationDetailsPostRequestValidatorTests
         var result = (await _validator.ValidateAsync(request));
 
         result.IsValid.Should().BeFalse();
-        result.Errors.First().ErrorMessage.Should().Be("You must enter the number of apprentices");
+        result.Errors.First().ErrorMessage.Should().Be("You must enter the number of learners");
     }
 
     [Test]

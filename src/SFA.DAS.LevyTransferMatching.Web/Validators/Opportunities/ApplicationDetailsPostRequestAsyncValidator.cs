@@ -27,10 +27,10 @@ internal class ApplicationDetailsPostRequestAsyncValidator : AsyncValidator<Appl
 
         RuleFor(request => request.NumberOfApprentices)
             .Cascade(CascadeMode.Stop)
-            .NotNull().WithMessage("You must enter the number of apprentices")
-            .NotEmpty().WithMessage("You must enter the number of apprentices")
+            .NotNull().WithMessage("You must enter the number of learners")
+            .NotEmpty().WithMessage("You must enter the number of learners")
             .Must((request, s) => request.ParsedNumberOfApprentices.HasValue && request.ParsedNumberOfApprentices.Value > 0)
-            .WithMessage("You must enter the number of apprentices")               
+            .WithMessage("You must enter the number of learners")               
             ;
 
         RuleFor(request => request.ExceedsAvailableFunding)
